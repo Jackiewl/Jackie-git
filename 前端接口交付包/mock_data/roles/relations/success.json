@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "role_code": "P1.1.1",
+      "role_name": "岗位A",
+      "role_family_code": "F01",
+      "direction_code": "D01"
+    },
+    {
+      "role_code": "P1.1.2",
+      "role_name": "岗位B",
+      "role_family_code": "F01",
+      "direction_code": "D01"
+    }
+  ],
+  "edges": [
+    {
+      "source_role_code": "P1.1.1",
+      "target_role_code": "P1.1.2",
+      "relation_type": "容易混淆",
+      "summary": "工作边界不同"
+    }
+  ]
+}

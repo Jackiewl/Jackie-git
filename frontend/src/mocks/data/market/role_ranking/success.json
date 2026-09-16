@@ -1,0 +1,12 @@
+{
+  "ranking_type": "demand",
+  "items": [
+    {
+      "rank": 1,
+      "role_code": "P1.1.1",
+      "role_name": "示例标准岗位",
+      "value": 950,
+      "change_rate": 0.15
+    }
+  ]
+}

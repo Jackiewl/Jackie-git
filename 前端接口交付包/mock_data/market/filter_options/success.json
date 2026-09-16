@@ -1,0 +1,63 @@
+{
+  "cities": [
+    {
+      "code": "北京",
+      "name": "北京",
+      "job_count": 1200
+    },
+    {
+      "code": "上海",
+      "name": "上海",
+      "job_count": 980
+    }
+  ],
+  "platforms": [
+    {
+      "code": "boss",
+      "name": "Boss直聘"
+    },
+    {
+      "code": "liepin",
+      "name": "猎聘"
+    },
+    {
+      "code": "yupao",
+      "name": "鱼泡"
+    },
+    {
+      "code": "shixiseng",
+      "name": "实习僧"
+    },
+    {
+      "code": "51job",
+      "name": "前程无忧"
+    },
+    {
+      "code": "zhilian",
+      "name": "智联招聘"
+    }
+  ],
+  "job_statuses": [
+    {
+      "code": "active",
+      "name": "在招"
+    },
+    {
+      "code": "offline",
+      "name": "下架"
+    },
+    {
+      "code": "all",
+      "name": "全部"
+    }
+  ],
+  "granularities": [
+    "day",
+    "week",
+    "month"
+  ],
+  "date_range": {
+    "min_date": "2026-07-01",
+    "max_date": "2026-09-15"
+  }
+}

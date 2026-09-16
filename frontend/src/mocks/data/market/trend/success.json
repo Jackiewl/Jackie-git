@@ -1,0 +1,27 @@
+{
+  "granularity": "day",
+  "series": [
+    {
+      "period": "2026-09-13",
+      "active_count": 8000,
+      "new_count": 100,
+      "offline_count": 30,
+      "net_change": 70
+    },
+    {
+      "period": "2026-09-14",
+      "active_count": 8075,
+      "new_count": 110,
+      "offline_count": 35,
+      "net_change": 75
+    },
+    {
+      "period": "2026-09-15",
+      "active_count": 8200,
+      "new_count": 160,
+      "offline_count": 35,
+      "net_change": 125
+    }
+  ],
+  "previous_period": []
+}

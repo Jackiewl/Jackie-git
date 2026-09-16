@@ -1,0 +1,10 @@
+{
+  "filters": {},
+  "dimensions": [
+    "salary",
+    "education",
+    "experience",
+    "industry",
+    "company"
+  ]
+}

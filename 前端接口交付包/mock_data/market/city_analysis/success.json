@@ -1,0 +1,14 @@
+{
+  "cities": [
+    {
+      "city_code": "北京",
+      "city_name": "北京",
+      "active_count": 1200,
+      "new_count": 80,
+      "offline_count": 20,
+      "net_change": 60
+    }
+  ],
+  "trend": [],
+  "hot_roles": []
+}

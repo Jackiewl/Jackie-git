@@ -1,0 +1,37 @@
+{
+  "salary": [
+    {
+      "label": "10K-15K",
+      "count": 1200,
+      "percentage": 0.24
+    }
+  ],
+  "education": [
+    {
+      "label": "本科",
+      "count": 2600,
+      "percentage": 0.52
+    }
+  ],
+  "experience": [
+    {
+      "label": "1-3年",
+      "count": 1700,
+      "percentage": 0.34
+    }
+  ],
+  "industry": [
+    {
+      "label": "通信/电子",
+      "count": 900,
+      "percentage": 0.18
+    }
+  ],
+  "company": [
+    {
+      "label": "示例公司",
+      "count": 100,
+      "percentage": 0.02
+    }
+  ]
+}

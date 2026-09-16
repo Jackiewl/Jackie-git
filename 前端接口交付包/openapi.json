@@ -1,0 +1,2063 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "学生就业与学习路径数据接口",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/system/bootstrap/query": {
+      "post": {
+        "tags": [
+          "系统初始化"
+        ],
+        "summary": "系统初始化",
+        "operationId": "endpoint_api_v1_system_bootstrap_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BootstrapRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_BootstrapResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/taxonomy/tree/query": {
+      "post": {
+        "tags": [
+          "岗位分类树"
+        ],
+        "summary": "岗位分类树",
+        "operationId": "endpoint_api_v1_taxonomy_tree_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TreeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_TreeResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/filter-options/query": {
+      "post": {
+        "tags": [
+          "市场筛选选项"
+        ],
+        "summary": "市场筛选选项",
+        "operationId": "endpoint_api_v1_market_filter_options_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterOptionsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_FilterOptionsResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/overview/query": {
+      "post": {
+        "tags": [
+          "就业市场核心指标"
+        ],
+        "summary": "就业市场核心指标",
+        "operationId": "endpoint_api_v1_market_overview_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarketRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_MarketResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/trend/query": {
+      "post": {
+        "tags": [
+          "招聘变化趋势"
+        ],
+        "summary": "招聘变化趋势",
+        "operationId": "endpoint_api_v1_market_trend_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrendRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_TrendResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/role-distribution/query": {
+      "post": {
+        "tags": [
+          "岗位市场分布"
+        ],
+        "summary": "岗位市场分布",
+        "operationId": "endpoint_api_v1_market_role_distribution_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DistributionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_DistributionResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/role-ranking/query": {
+      "post": {
+        "tags": [
+          "岗位排名"
+        ],
+        "summary": "岗位排名",
+        "operationId": "endpoint_api_v1_market_role_ranking_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RankingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_RankingResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/city-analysis/query": {
+      "post": {
+        "tags": [
+          "城市分析"
+        ],
+        "summary": "城市分析",
+        "operationId": "endpoint_api_v1_market_city_analysis_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CityRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_CityResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/requirements/query": {
+      "post": {
+        "tags": [
+          "招聘要求分布"
+        ],
+        "summary": "招聘要求分布",
+        "operationId": "endpoint_api_v1_market_requirements_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequirementsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_RequirementsResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/roles/map/query": {
+      "post": {
+        "tags": [
+          "岗位地图"
+        ],
+        "summary": "岗位地图",
+        "operationId": "endpoint_api_v1_roles_map_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleMapRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_RoleMapResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/roles/profile/query": {
+      "post": {
+        "tags": [
+          "岗位完整画像"
+        ],
+        "summary": "岗位完整画像",
+        "operationId": "endpoint_api_v1_roles_profile_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_RoleProfileResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/roles/relations/query": {
+      "post": {
+        "tags": [
+          "相似岗位关系"
+        ],
+        "summary": "相似岗位关系",
+        "operationId": "endpoint_api_v1_roles_relations_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RelationsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_RelationsResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/roles/compare": {
+      "post": {
+        "tags": [
+          "岗位对比"
+        ],
+        "summary": "岗位对比",
+        "operationId": "endpoint_api_v1_roles_compare_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompareRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_CompareResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/learning-path/query": {
+      "post": {
+        "tags": [
+          "岗位标准学习路径"
+        ],
+        "summary": "岗位标准学习路径",
+        "operationId": "endpoint_api_v1_learning_path_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LearningPathRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_LearningPathResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/practice-tasks/detail/query": {
+      "post": {
+        "tags": [
+          "实践任务详情"
+        ],
+        "summary": "实践任务详情",
+        "operationId": "endpoint_api_v1_practice_tasks_detail_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaskDetailRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEnvelope_TaskDetailResponseData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiEnvelope_BootstrapResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/BootstrapResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[BootstrapResponseData]"
+      },
+      "ApiEnvelope_CityResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CityResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[CityResponseData]"
+      },
+      "ApiEnvelope_CompareResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CompareResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[CompareResponseData]"
+      },
+      "ApiEnvelope_DistributionResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/DistributionResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[DistributionResponseData]"
+      },
+      "ApiEnvelope_FilterOptionsResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/FilterOptionsResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[FilterOptionsResponseData]"
+      },
+      "ApiEnvelope_LearningPathResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LearningPathResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[LearningPathResponseData]"
+      },
+      "ApiEnvelope_MarketResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/MarketResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[MarketResponseData]"
+      },
+      "ApiEnvelope_RankingResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RankingResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[RankingResponseData]"
+      },
+      "ApiEnvelope_RelationsResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RelationsResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[RelationsResponseData]"
+      },
+      "ApiEnvelope_RequirementsResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RequirementsResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[RequirementsResponseData]"
+      },
+      "ApiEnvelope_RoleMapResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RoleMapResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[RoleMapResponseData]"
+      },
+      "ApiEnvelope_RoleProfileResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RoleProfileResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[RoleProfileResponseData]"
+      },
+      "ApiEnvelope_TaskDetailResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TaskDetailResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[TaskDetailResponseData]"
+      },
+      "ApiEnvelope_TreeResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TreeResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[TreeResponseData]"
+      },
+      "ApiEnvelope_TrendResponseData_": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code",
+            "default": 0
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": "success"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TrendResponseData"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "ApiEnvelope[TrendResponseData]"
+      },
+      "BootstrapRequest": {
+        "properties": {
+          "include_module_status": {
+            "type": "boolean",
+            "title": "Include Module Status",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "BootstrapRequest"
+      },
+      "BootstrapResponseData": {
+        "properties": {
+          "system_name": {
+            "type": "string",
+            "title": "System Name"
+          },
+          "api_version": {
+            "type": "string",
+            "title": "Api Version"
+          },
+          "data_mode": {
+            "type": "string",
+            "title": "Data Mode"
+          },
+          "default_filters": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Default Filters"
+          },
+          "module_status": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Module Status"
+          },
+          "latest_refresh": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Refresh"
+          }
+        },
+        "type": "object",
+        "required": [
+          "system_name",
+          "api_version",
+          "data_mode",
+          "default_filters",
+          "module_status",
+          "latest_refresh"
+        ],
+        "title": "BootstrapResponseData"
+      },
+      "CityRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          },
+          "options": {
+            "$ref": "#/components/schemas/MarketOptions"
+          }
+        },
+        "type": "object",
+        "title": "CityRequest"
+      },
+      "CityResponseData": {
+        "properties": {
+          "cities": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Cities"
+          },
+          "trend": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Trend"
+          },
+          "hot_roles": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Hot Roles"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cities",
+          "trend",
+          "hot_roles"
+        ],
+        "title": "CityResponseData"
+      },
+      "CompareRequest": {
+        "properties": {
+          "role_code_a": {
+            "type": "string",
+            "title": "Role Code A"
+          },
+          "role_code_b": {
+            "type": "string",
+            "title": "Role Code B"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role_code_a",
+          "role_code_b"
+        ],
+        "title": "CompareRequest"
+      },
+      "CompareResponseData": {
+        "properties": {
+          "roles": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Roles"
+          },
+          "ability_difference": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Ability Difference"
+          },
+          "tool_difference": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Tool Difference"
+          },
+          "market": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Market"
+          },
+          "paths": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Paths"
+          }
+        },
+        "type": "object",
+        "required": [
+          "roles",
+          "ability_difference",
+          "tool_difference",
+          "market",
+          "paths"
+        ],
+        "title": "CompareResponseData"
+      },
+      "DistributionRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          },
+          "taxonomy_level": {
+            "type": "string",
+            "enum": [
+              "family",
+              "direction",
+              "role"
+            ],
+            "title": "Taxonomy Level",
+            "default": "family"
+          }
+        },
+        "type": "object",
+        "title": "DistributionRequest"
+      },
+      "DistributionResponseData": {
+        "properties": {
+          "taxonomy_level": {
+            "type": "string",
+            "title": "Taxonomy Level"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "taxonomy_level",
+          "total",
+          "items"
+        ],
+        "title": "DistributionResponseData"
+      },
+      "FilterOptionsRequest": {
+        "properties": {
+          "include_platforms": {
+            "type": "boolean",
+            "title": "Include Platforms",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "FilterOptionsRequest"
+      },
+      "FilterOptionsResponseData": {
+        "properties": {
+          "cities": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Cities"
+          },
+          "platforms": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Platforms"
+          },
+          "job_statuses": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Job Statuses"
+          },
+          "granularities": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Granularities"
+          },
+          "date_range": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Date Range"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cities",
+          "platforms",
+          "job_statuses",
+          "granularities",
+          "date_range"
+        ],
+        "title": "FilterOptionsResponseData"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LearningPathRequest": {
+        "properties": {
+          "role_code": {
+            "type": "string",
+            "title": "Role Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role_code"
+        ],
+        "title": "LearningPathRequest"
+      },
+      "LearningPathResponseData": {
+        "properties": {
+          "role": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Role"
+          },
+          "summary": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Summary"
+          },
+          "coverage": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Coverage"
+          },
+          "stages": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Stages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role",
+          "summary",
+          "coverage",
+          "stages"
+        ],
+        "title": "LearningPathResponseData"
+      },
+      "MarketOptions": {
+        "properties": {
+          "granularity": {
+            "type": "string",
+            "enum": [
+              "day",
+              "week",
+              "month"
+            ],
+            "title": "Granularity",
+            "default": "day"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 10
+          }
+        },
+        "type": "object",
+        "title": "MarketOptions"
+      },
+      "MarketRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          }
+        },
+        "type": "object",
+        "title": "MarketRequest"
+      },
+      "MarketResponseData": {
+        "properties": {
+          "communication_job_count": {
+            "type": "integer",
+            "title": "Communication Job Count"
+          },
+          "active_job_count": {
+            "type": "integer",
+            "title": "Active Job Count"
+          },
+          "new_job_count_7d": {
+            "type": "integer",
+            "title": "New Job Count 7D"
+          },
+          "offline_job_count_7d": {
+            "type": "integer",
+            "title": "Offline Job Count 7D"
+          },
+          "net_change_7d": {
+            "type": "integer",
+            "title": "Net Change 7D"
+          }
+        },
+        "type": "object",
+        "required": [
+          "communication_job_count",
+          "active_job_count",
+          "new_job_count_7d",
+          "offline_job_count_7d",
+          "net_change_7d"
+        ],
+        "title": "MarketResponseData"
+      },
+      "Meta": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "data_updated_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data Updated At"
+          },
+          "timezone": {
+            "type": "string",
+            "title": "Timezone",
+            "default": "Asia/Shanghai"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "generated_at"
+        ],
+        "title": "Meta"
+      },
+      "RankingRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          },
+          "ranking_type": {
+            "type": "string",
+            "enum": [
+              "demand",
+              "new",
+              "growth",
+              "decline"
+            ],
+            "title": "Ranking Type",
+            "default": "demand"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 10
+          }
+        },
+        "type": "object",
+        "title": "RankingRequest"
+      },
+      "RankingResponseData": {
+        "properties": {
+          "ranking_type": {
+            "type": "string",
+            "title": "Ranking Type"
+          },
+          "items": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ranking_type",
+          "items"
+        ],
+        "title": "RankingResponseData"
+      },
+      "RelationsRequest": {
+        "properties": {
+          "family_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Family Codes"
+          },
+          "direction_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Direction Codes"
+          },
+          "role_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Role Codes"
+          }
+        },
+        "type": "object",
+        "title": "RelationsRequest"
+      },
+      "RelationsResponseData": {
+        "properties": {
+          "nodes": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Nodes"
+          },
+          "edges": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Edges"
+          }
+        },
+        "type": "object",
+        "required": [
+          "nodes",
+          "edges"
+        ],
+        "title": "RelationsResponseData"
+      },
+      "RequirementsRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          },
+          "dimensions": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "salary",
+                "education",
+                "experience",
+                "industry",
+                "company"
+              ]
+            },
+            "type": "array",
+            "title": "Dimensions"
+          }
+        },
+        "type": "object",
+        "title": "RequirementsRequest"
+      },
+      "RequirementsResponseData": {
+        "properties": {
+          "salary": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Salary"
+          },
+          "education": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Education"
+          },
+          "experience": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Experience"
+          },
+          "industry": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Industry"
+          },
+          "company": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Company"
+          }
+        },
+        "type": "object",
+        "title": "RequirementsResponseData"
+      },
+      "RoleMapRequest": {
+        "properties": {
+          "family_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Family Codes"
+          },
+          "direction_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Direction Codes"
+          }
+        },
+        "type": "object",
+        "title": "RoleMapRequest"
+      },
+      "RoleMapResponseData": {
+        "properties": {
+          "roles": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Roles"
+          }
+        },
+        "type": "object",
+        "required": [
+          "roles"
+        ],
+        "title": "RoleMapResponseData"
+      },
+      "RoleProfileRequest": {
+        "properties": {
+          "role_code": {
+            "type": "string",
+            "title": "Role Code"
+          },
+          "market_filters": {
+            "$ref": "#/components/schemas/endpoints__roles_profile__schemas__MarketFilters"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role_code"
+        ],
+        "title": "RoleProfileRequest"
+      },
+      "RoleProfileResponseData": {
+        "properties": {
+          "role": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Role"
+          },
+          "market": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Market"
+          },
+          "ability_groups": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Ability Groups"
+          },
+          "tools": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Tools"
+          },
+          "similar_roles": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Similar Roles"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role",
+          "market",
+          "ability_groups",
+          "tools",
+          "similar_roles"
+        ],
+        "title": "RoleProfileResponseData"
+      },
+      "TaskDetailRequest": {
+        "properties": {
+          "task_code": {
+            "type": "string",
+            "title": "Task Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "task_code"
+        ],
+        "title": "TaskDetailRequest"
+      },
+      "TaskDetailResponseData": {
+        "properties": {
+          "task": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Task"
+          },
+          "courses": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Courses"
+          },
+          "steps": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Steps"
+          },
+          "outputs": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Outputs"
+          },
+          "micro_abilities": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Micro Abilities"
+          },
+          "tools": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Tools"
+          },
+          "prerequisite_tasks": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Prerequisite Tasks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "task",
+          "courses",
+          "steps",
+          "outputs",
+          "micro_abilities",
+          "tools",
+          "prerequisite_tasks"
+        ],
+        "title": "TaskDetailResponseData"
+      },
+      "TreeRequest": {
+        "properties": {
+          "active_only": {
+            "type": "boolean",
+            "title": "Active Only",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "TreeRequest"
+      },
+      "TreeResponseData": {
+        "properties": {
+          "families": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Families"
+          },
+          "counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Counts"
+          }
+        },
+        "type": "object",
+        "required": [
+          "families",
+          "counts"
+        ],
+        "title": "TreeResponseData"
+      },
+      "TrendRequest": {
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/app__core__market_filters__MarketFilters"
+          },
+          "options": {
+            "$ref": "#/components/schemas/MarketOptions"
+          },
+          "compare_previous_period": {
+            "type": "boolean",
+            "title": "Compare Previous Period",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "TrendRequest"
+      },
+      "TrendResponseData": {
+        "properties": {
+          "granularity": {
+            "type": "string",
+            "title": "Granularity"
+          },
+          "series": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "previous_period": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Previous Period"
+          }
+        },
+        "type": "object",
+        "required": [
+          "granularity",
+          "series",
+          "previous_period"
+        ],
+        "title": "TrendResponseData"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "app__core__market_filters__MarketFilters": {
+        "properties": {
+          "date_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date From"
+          },
+          "date_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date To"
+          },
+          "family_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Family Codes"
+          },
+          "direction_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Direction Codes"
+          },
+          "role_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Role Codes"
+          },
+          "city_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "City Codes"
+          },
+          "platform_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Platform Codes"
+          },
+          "job_status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "offline",
+              "all"
+            ],
+            "title": "Job Status",
+            "default": "active"
+          }
+        },
+        "type": "object",
+        "title": "MarketFilters"
+      },
+      "endpoints__roles_profile__schemas__MarketFilters": {
+        "properties": {
+          "date_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date From"
+          },
+          "date_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date To"
+          },
+          "city_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "City Codes"
+          }
+        },
+        "type": "object",
+        "title": "MarketFilters"
+      }
+    }
+  }
+}

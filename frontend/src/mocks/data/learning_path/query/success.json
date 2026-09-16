@@ -1,0 +1,52 @@
+{
+  "role": {
+    "role_code": "P1.1.1",
+    "role_name": "示例岗位",
+    "direction_name": "示例方向"
+  },
+  "summary": {
+    "total_task_count": 4,
+    "main_task_count": 3,
+    "supplement_task_count": 1
+  },
+  "coverage": {
+    "micro_ability_weighted_satisfaction": 0.86,
+    "core_micro_ability_pass_rate": 0.91,
+    "tool_weighted_satisfaction": 0.82,
+    "core_tool_pass_rate": 0.88,
+    "overall_satisfaction": 0.85
+  },
+  "stages": [
+    {
+      "stage_code": "PB",
+      "stage_name": "公共基础",
+      "stage_order": 1,
+      "tasks": [
+        {
+          "task_code": "PB-01",
+          "task_name": "示例实践任务",
+          "task_role": "main",
+          "selection_reason": "覆盖核心能力"
+        }
+      ]
+    },
+    {
+      "stage_code": "PF",
+      "stage_name": "专业基础",
+      "stage_order": 2,
+      "tasks": []
+    },
+    {
+      "stage_code": "JP",
+      "stage_name": "岗位实践",
+      "stage_order": 3,
+      "tasks": []
+    },
+    {
+      "stage_code": "CP",
+      "stage_name": "综合实践",
+      "stage_order": 4,
+      "tasks": []
+    }
+  ]
+}

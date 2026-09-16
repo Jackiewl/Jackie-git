@@ -1,0 +1,48 @@
+{
+  "task": {
+    "task_code": "PB-01",
+    "task_name": "示例实践任务",
+    "task_level": "PB",
+    "engineering_background": "任务背景",
+    "task_objective": "任务目标",
+    "task_content": "任务内容"
+  },
+  "courses": [
+    {
+      "course_code": "C001",
+      "course_name": "示例课程",
+      "relation_type": "支撑"
+    }
+  ],
+  "steps": [
+    {
+      "step_no": 1,
+      "subitem_code": "1.1",
+      "original_text": "完成环境搭建",
+      "detail_text": "按照要求完成配置",
+      "acceptance_criteria": "环境正常运行"
+    }
+  ],
+  "outputs": [
+    {
+      "output_text": "实践报告"
+    }
+  ],
+  "micro_abilities": [
+    {
+      "micro_ability_code": "MA01",
+      "micro_ability_name": "示例微能力",
+      "training_value": 0.8,
+      "training_label": "强训练"
+    }
+  ],
+  "tools": [
+    {
+      "tool_code": "TOOL01",
+      "tool_name": "示例工具",
+      "improvement_value": 0.6,
+      "improvement_label": "主要提升"
+    }
+  ],
+  "prerequisite_tasks": []
+}

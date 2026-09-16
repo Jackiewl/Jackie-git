@@ -1,0 +1,792 @@
+{
+  "families": [
+    {
+      "family_code": "P1",
+      "family_name": "通信系统、设备与核心技术研发",
+      "directions": [
+        {
+          "direction_code": "P1.1",
+          "direction_name": "无线通信算法与系统研发",
+          "roles": [
+            {
+              "role_code": "P1.1.1",
+              "role_name": "无线通信算法工程师",
+              "work_scope": "负责无线通信核心算法设计，包括物理层算法、信号处理算法、信道估计、编码调制、MIMO算法等"
+            },
+            {
+              "role_code": "P1.1.2",
+              "role_name": "无线资源管理算法工程师",
+              "work_scope": "负责无线资源调度、功率控制、频谱管理、干扰协调、用户调度算法设计"
+            },
+            {
+              "role_code": "P1.1.3",
+              "role_name": "无线通信系统工程师",
+              "work_scope": "负责无线通信系统方案设计、链路预算、系统仿真、性能分析和整体架构设计"
+            },
+            {
+              "role_code": "P1.1.4",
+              "role_name": "无线协议栈开发工程师",
+              "work_scope": "负责无线接入协议栈开发，包括MAC、RLC、PDCP、RRC等协议模块实现"
+            },
+            {
+              "role_code": "P1.1.5",
+              "role_name": "开放无线网络研发工程师",
+              "work_scope": "负责O-RAN、vRAN、AI-RAN系统开发，包括开放接口、智能控制和云化无线系统研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P1.2",
+          "direction_name": "核心网与通信协议研发",
+          "roles": [
+            {
+              "role_code": "P1.2.1",
+              "role_name": "核心网软件开发工程师",
+              "work_scope": "负责5GC、EPC核心网功能模块的软件开发，包括控制面和用户面功能实现"
+            },
+            {
+              "role_code": "P1.2.2",
+              "role_name": "核心网协议开发工程师",
+              "work_scope": "负责核心网信令协议、接口协议、网络流程和协议栈开发"
+            },
+            {
+              "role_code": "P1.2.3",
+              "role_name": "云原生核心网工程师",
+              "work_scope": "负责核心网云化部署、微服务架构、容器化改造和云原生网络研发"
+            },
+            {
+              "role_code": "P1.2.4",
+              "role_name": "通信协议开发工程师",
+              "work_scope": "负责通信协议设计、协议栈实现、接口开发和协议测试"
+            },
+            {
+              "role_code": "P1.2.5",
+              "role_name": "通信系统架构工程师",
+              "work_scope": "负责通信系统总体架构设计、网络演进规划、SBA架构设计和技术路线规划"
+            }
+          ]
+        },
+        {
+          "direction_code": "P1.3",
+          "direction_name": "光通信与传输设备研发",
+          "roles": [
+            {
+              "role_code": "P1.3.1",
+              "role_name": "光通信系统工程师",
+              "work_scope": "负责光网络系统方案设计、性能分析、链路规划和系统架构设计"
+            },
+            {
+              "role_code": "P1.3.2",
+              "role_name": "光传输设备研发工程师",
+              "work_scope": "负责OTN、DWDM等光传输设备软硬件研发"
+            },
+            {
+              "role_code": "P1.3.3",
+              "role_name": "PON系统研发工程师",
+              "work_scope": "负责OLT、ONU、接入网系统和PON协议研发"
+            },
+            {
+              "role_code": "P1.3.4",
+              "role_name": "光模块研发工程师",
+              "work_scope": "负责光模块设计、封装、调试、测试和性能优化"
+            },
+            {
+              "role_code": "P1.3.5",
+              "role_name": "光器件研发工程师",
+              "work_scope": "负责光芯片、硅光器件、光电子器件研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P1.4",
+          "direction_name": "数据通信设备与网络软件研发",
+          "roles": [
+            {
+              "role_code": "P1.4.1",
+              "role_name": "路由交换软件开发工程师",
+              "work_scope": "负责路由器、交换机软件功能开发，包括转发、控制和管理模块"
+            },
+            {
+              "role_code": "P1.4.2",
+              "role_name": "网络协议开发工程师",
+              "work_scope": "负责路由交换协议、控制协议和网络功能开发"
+            },
+            {
+              "role_code": "P1.4.3",
+              "role_name": "网络操作系统开发工程师",
+              "work_scope": "负责网络设备操作系统、网络软件平台和系统组件开发"
+            },
+            {
+              "role_code": "P1.4.4",
+              "role_name": "网络设备驱动开发工程师",
+              "work_scope": "负责网络芯片驱动、硬件抽象层、设备适配开发"
+            },
+            {
+              "role_code": "P1.4.5",
+              "role_name": "嵌入式网络软件工程师",
+              "work_scope": "负责网络设备嵌入式软件、系统服务和底层控制程序开发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P1.5",
+          "direction_name": "网络芯片与高性能网络研发",
+          "roles": [
+            {
+              "role_code": "P1.5.1",
+              "role_name": "网络芯片设计工程师",
+              "work_scope": "负责交换芯片、网络ASIC、网络处理器等芯片架构和设计"
+            },
+            {
+              "role_code": "P1.5.2",
+              "role_name": "芯片验证工程师",
+              "work_scope": "负责芯片功能验证、仿真验证、测试环境开发"
+            },
+            {
+              "role_code": "P1.5.3",
+              "role_name": "FPGA开发工程师",
+              "work_scope": "负责FPGA逻辑设计、高速接口开发和硬件加速"
+            },
+            {
+              "role_code": "P1.5.4",
+              "role_name": "高性能网络研发工程师",
+              "work_scope": "负责高速数据面、RDMA、DPDK、低延迟网络软件研发"
+            },
+            {
+              "role_code": "P1.5.5",
+              "role_name": "智能网卡与DPU研发工程师",
+              "work_scope": "负责SmartNIC、DPU/IPU、网络卸载和算力网络硬件研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P1.6",
+          "direction_name": "射频、微波与天线研发",
+          "roles": [
+            {
+              "role_code": "P1.6.1",
+              "role_name": "射频电路设计工程师",
+              "work_scope": "负责射频前端、电路、功放、滤波器和收发链路设计"
+            },
+            {
+              "role_code": "P1.6.2",
+              "role_name": "微波与毫米波工程师",
+              "work_scope": "负责微波、毫米波、高频通信系统设计"
+            },
+            {
+              "role_code": "P1.6.3",
+              "role_name": "天线工程师",
+              "work_scope": "负责天线设计、仿真、测试和性能优化"
+            },
+            {
+              "role_code": "P1.6.4",
+              "role_name": "射频测试工程师",
+              "work_scope": "负责射频性能测试、OTA测试和无线指标验证"
+            },
+            {
+              "role_code": "P1.6.5",
+              "role_name": "EMC工程师",
+              "work_scope": "负责电磁兼容设计、测试和问题整改"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "P2",
+      "family_name": "通信网络规划与基础设施建设",
+      "directions": [
+        {
+          "direction_code": "P2.1",
+          "direction_name": "无线网络规划与优化",
+          "roles": [
+            {
+              "role_code": "P2.1.1",
+              "role_name": "无线网络规划工程师",
+              "work_scope": "负责无线网络覆盖、容量、站点、频率规划，制定无线网络建设方案"
+            },
+            {
+              "role_code": "P2.1.2",
+              "role_name": "无线网络优化工程师",
+              "work_scope": "负责4G/5G网络性能优化，包括覆盖、容量、干扰、参数调整等"
+            },
+            {
+              "role_code": "P2.1.3",
+              "role_name": "无线网络测试工程师",
+              "work_scope": "负责无线网络测试、性能验证、路测分析和网络质量评估"
+            },
+            {
+              "role_code": "P2.1.4",
+              "role_name": "室内覆盖工程师",
+              "work_scope": "负责室分系统设计、部署、调测和室内无线覆盖优化"
+            }
+          ]
+        },
+        {
+          "direction_code": "P2.2",
+          "direction_name": "通信网络建设与部署",
+          "roles": [
+            {
+              "role_code": "P2.2.1",
+              "role_name": "通信工程实施工程师",
+              "work_scope": "负责通信工程现场施工、设备安装、线路建设、设备调试和工程实施"
+            },
+            {
+              "role_code": "P2.2.2",
+              "role_name": "无线基站工程师",
+              "work_scope": "负责基站安装、开通、调测、升级和现场维护"
+            },
+            {
+              "role_code": "P2.2.3",
+              "role_name": "核心网部署工程师",
+              "work_scope": "负责核心网设备部署、配置、业务开通和系统升级"
+            },
+            {
+              "role_code": "P2.2.4",
+              "role_name": "通信系统集成工程师",
+              "work_scope": "负责不同厂家设备、系统和网络之间的集成联调"
+            },
+            {
+              "role_code": "P2.2.5",
+              "role_name": "通信项目工程师",
+              "work_scope": "负责通信项目实施过程管理，包括进度、质量、协调和交付"
+            }
+          ]
+        },
+        {
+          "direction_code": "P2.3",
+          "direction_name": "传输网与承载网工程",
+          "roles": [
+            {
+              "role_code": "P2.3.1",
+              "role_name": "传输网工程师",
+              "work_scope": "负责光传输网络建设、设备配置、链路开通和传输资源管理"
+            },
+            {
+              "role_code": "P2.3.2",
+              "role_name": "承载网工程师",
+              "work_scope": "负责运营商城域承载网、IPRAN、PTN/MPLS网络建设和优化"
+            },
+            {
+              "role_code": "P2.3.3",
+              "role_name": "IP骨干网工程师",
+              "work_scope": "负责大型IP网络、骨干网络规划、部署和运行保障"
+            },
+            {
+              "role_code": "P2.3.4",
+              "role_name": "传输网络规划工程师",
+              "work_scope": "负责传输网络架构设计、容量规划、链路规划和资源规划"
+            }
+          ]
+        },
+        {
+          "direction_code": "P2.4",
+          "direction_name": "数据中心与智算网络工程",
+          "roles": [
+            {
+              "role_code": "P2.4.1",
+              "role_name": "数据中心网络工程师",
+              "work_scope": "负责IDC网络规划、交换机部署、网络配置和数据中心网络运行"
+            },
+            {
+              "role_code": "P2.4.2",
+              "role_name": "数据中心网络架构工程师",
+              "work_scope": "负责大型数据中心网络架构设计、容量规划和网络演进方案"
+            },
+            {
+              "role_code": "P2.4.3",
+              "role_name": "智算网络工程师",
+              "work_scope": "负责AI计算集群网络建设，包括GPU集群、高速互联和低延迟网络"
+            },
+            {
+              "role_code": "P2.4.4",
+              "role_name": "算力网络工程师",
+              "work_scope": "负责计算资源、网络资源协同调度和算力基础设施网络建设"
+            },
+            {
+              "role_code": "P2.4.5",
+              "role_name": "AI基础设施网络工程师",
+              "work_scope": "负责AI训练平台、AI服务器集群和高性能网络基础设施建设"
+            }
+          ]
+        },
+        {
+          "direction_code": "P2.5",
+          "direction_name": "云网络与云网融合工程",
+          "roles": [
+            {
+              "role_code": "P2.5.1",
+              "role_name": "云网络工程师",
+              "work_scope": "负责公有云、私有云和混合云网络设计、部署和维护"
+            },
+            {
+              "role_code": "P2.5.2",
+              "role_name": "容器网络工程师",
+              "work_scope": "负责Kubernetes集群网络设计、部署和网络问题处理"
+            },
+            {
+              "role_code": "P2.5.3",
+              "role_name": "SDN网络工程师",
+              "work_scope": "负责软件定义网络部署、控制器配置和网络自动化"
+            },
+            {
+              "role_code": "P2.5.4",
+              "role_name": "云网融合工程师",
+              "work_scope": "负责云资源、专线、广域网和运营商网络融合建设"
+            }
+          ]
+        },
+        {
+          "direction_code": "P2.6",
+          "direction_name": "网络实施与交付",
+          "roles": [
+            {
+              "role_code": "P2.6.1",
+              "role_name": "网络实施工程师",
+              "work_scope": "负责网络设备部署、配置、调试和上线实施"
+            },
+            {
+              "role_code": "P2.6.2",
+              "role_name": "网络集成工程师",
+              "work_scope": "负责多厂家、多系统网络集成和联调"
+            },
+            {
+              "role_code": "P2.6.3",
+              "role_name": "网络交付工程师",
+              "work_scope": "负责项目交付、客户验收、问题闭环和技术支持"
+            },
+            {
+              "role_code": "P2.6.4",
+              "role_name": "云平台交付工程师",
+              "work_scope": "负责云平台、云网络和基础设施环境部署交付"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "P3",
+      "family_name": "通信网络运营与智能运维",
+      "directions": [
+        {
+          "direction_code": "P3.1",
+          "direction_name": "网络运行与监控",
+          "roles": [
+            {
+              "role_code": "P3.1.1",
+              "role_name": "网络监控工程师",
+              "work_scope": "负责网络设备、链路、业务状态监控，处理告警和异常事件"
+            },
+            {
+              "role_code": "P3.1.2",
+              "role_name": "网络性能分析工程师",
+              "work_scope": "负责网络性能指标分析、容量分析、流量分析和质量评估"
+            },
+            {
+              "role_code": "P3.1.3",
+              "role_name": "网络运营工程师",
+              "work_scope": "负责网络资源管理、业务运行分析、运营指标管理和网络质量保障"
+            }
+          ]
+        },
+        {
+          "direction_code": "P3.2",
+          "direction_name": "网络运维与故障保障",
+          "roles": [
+            {
+              "role_code": "P3.2.1",
+              "role_name": "网络运维工程师",
+              "work_scope": "负责企业网络、园区网络、设备运行维护、配置变更和故障处理"
+            },
+            {
+              "role_code": "P3.2.2",
+              "role_name": "数据中心网络运维工程师",
+              "work_scope": "负责IDC网络设备维护、网络变更、故障处理和稳定性保障"
+            },
+            {
+              "role_code": "P3.2.3",
+              "role_name": "云网络运维工程师",
+              "work_scope": "负责云网络资源、虚拟网络、网关和云基础设施维护"
+            },
+            {
+              "role_code": "P3.2.4",
+              "role_name": "运营商网络运维工程师",
+              "work_scope": "负责无线、核心网、传输网、承载网等运营商网络维护"
+            },
+            {
+              "role_code": "P3.2.5",
+              "role_name": "网络应急保障工程师",
+              "work_scope": "负责重大故障处理、应急通信保障和重要业务保障"
+            }
+          ]
+        },
+        {
+          "direction_code": "P3.3",
+          "direction_name": "网络自动化与运维开发",
+          "roles": [
+            {
+              "role_code": "P3.3.1",
+              "role_name": "网络自动化工程师",
+              "work_scope": "负责网络配置自动化、批量部署、自动巡检和自动化工具开发"
+            },
+            {
+              "role_code": "P3.3.2",
+              "role_name": "网络运维开发工程师",
+              "work_scope": "负责网络运维平台、自动化系统和运维工具软件开发"
+            },
+            {
+              "role_code": "P3.3.3",
+              "role_name": "网络配置管理工程师",
+              "work_scope": "负责网络设备配置、版本、资产、变更流程管理"
+            }
+          ]
+        },
+        {
+          "direction_code": "P3.4",
+          "direction_name": "AIOps与智能网络运维",
+          "roles": [
+            {
+              "role_code": "P3.4.1",
+              "role_name": "AIOps工程师",
+              "work_scope": "负责AI驱动的网络监控、故障分析、智能告警和自动化运维系统建设"
+            },
+            {
+              "role_code": "P3.4.2",
+              "role_name": "网络智能算法工程师",
+              "work_scope": "负责网络数据建模、异常检测、预测分析和智能优化算法开发"
+            },
+            {
+              "role_code": "P3.4.3",
+              "role_name": "网络智能运维工程师",
+              "work_scope": "负责AI能力在实际网络运维场景中的部署和应用"
+            }
+          ]
+        },
+        {
+          "direction_code": "P3.5",
+          "direction_name": "网络可靠性与自治网络",
+          "roles": [
+            {
+              "role_code": "P3.5.1",
+              "role_name": "网络SRE工程师",
+              "work_scope": "负责网络稳定性、可靠性、高可用设计和故障治理"
+            },
+            {
+              "role_code": "P3.5.2",
+              "role_name": "网络容量与灾备工程师",
+              "work_scope": "负责网络容量规划、灾备方案设计和业务连续性保障"
+            },
+            {
+              "role_code": "P3.5.3",
+              "role_name": "自治网络工程师",
+              "work_scope": "负责网络自愈、自动优化、意图驱动网络和智能控制系统建设"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "P4",
+      "family_name": "网络软件与云化通信平台开发",
+      "directions": [
+        {
+          "direction_code": "P4.1",
+          "direction_name": "网络控制与编排平台开发",
+          "roles": [
+            {
+              "role_code": "P4.1.1",
+              "role_name": "SDN控制器开发工程师",
+              "work_scope": "负责SDN控制器开发，包括网络控制逻辑、协议接口和控制策略实现"
+            },
+            {
+              "role_code": "P4.1.2",
+              "role_name": "网络编排平台开发工程师",
+              "work_scope": "负责网络资源管理、业务编排、自动部署和网络服务自动化平台开发"
+            },
+            {
+              "role_code": "P4.1.3",
+              "role_name": "网络管理平台开发工程师",
+              "work_scope": "负责网管系统、网络监控平台、资源管理平台和运维管理软件开发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P4.2",
+          "direction_name": "云网络平台研发",
+          "roles": [
+            {
+              "role_code": "P4.2.1",
+              "role_name": "云网络研发工程师",
+              "work_scope": "负责云网络架构、网络服务、虚拟网络功能和云网络产品研发"
+            },
+            {
+              "role_code": "P4.2.2",
+              "role_name": "虚拟网络研发工程师",
+              "work_scope": "负责虚拟交换、虚拟路由、NFV和软件定义网络功能研发"
+            },
+            {
+              "role_code": "P4.2.3",
+              "role_name": "负载均衡研发工程师",
+              "work_scope": "负责四层/七层负载均衡、流量调度和高性能转发系统研发"
+            },
+            {
+              "role_code": "P4.2.4",
+              "role_name": "SD-WAN研发工程师",
+              "work_scope": "负责软件定义广域网控制系统、智能选路和广域网络软件研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P4.3",
+          "direction_name": "云原生网络与通信开发",
+          "roles": [
+            {
+              "role_code": "P4.3.1",
+              "role_name": "容器网络研发工程师",
+              "work_scope": "负责Kubernetes网络架构、CNI插件、容器网络数据面研发"
+            },
+            {
+              "role_code": "P4.3.2",
+              "role_name": "Service Mesh研发工程师",
+              "work_scope": "负责服务网格、服务通信、流量治理和服务安全研发"
+            },
+            {
+              "role_code": "P4.3.3",
+              "role_name": "云原生通信平台工程师",
+              "work_scope": "负责微服务通信框架、服务发现和云原生通信平台研发"
+            },
+            {
+              "role_code": "P4.3.4",
+              "role_name": "API网关研发工程师",
+              "work_scope": "负责API管理、流量控制、认证鉴权和接口治理平台研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P4.4",
+          "direction_name": "网络平台与数据软件开发",
+          "roles": [
+            {
+              "role_code": "P4.4.1",
+              "role_name": "网络平台开发工程师",
+              "work_scope": "负责网络后台系统、网络服务平台和网络中台开发"
+            },
+            {
+              "role_code": "P4.4.2",
+              "role_name": "网络API开发工程师",
+              "work_scope": "负责网络开放接口、自动化接口和服务接口开发"
+            },
+            {
+              "role_code": "P4.4.3",
+              "role_name": "网络数据平台工程师",
+              "work_scope": "负责网络数据采集、处理、分析和数据服务平台建设"
+            },
+            {
+              "role_code": "P4.4.4",
+              "role_name": "网络智能平台工程师",
+              "work_scope": "负责网络大模型、智能网络平台、AI Agent和智能决策系统研发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P4.5",
+          "direction_name": "实时通信与通信应用开发",
+          "roles": [
+            {
+              "role_code": "P4.5.1",
+              "role_name": "实时音视频开发工程师",
+              "work_scope": "负责实时音视频系统、媒体传输、编解码和RTC平台开发"
+            },
+            {
+              "role_code": "P4.5.2",
+              "role_name": "通信平台开发工程师",
+              "work_scope": "负责即时通信、消息系统、融合通信平台开发"
+            },
+            {
+              "role_code": "P4.5.3",
+              "role_name": "行业通信应用开发工程师",
+              "work_scope": "负责行业通信业务系统和通信应用软件开发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P4.6",
+          "direction_name": "网络基础软件与系统开发",
+          "roles": [
+            {
+              "role_code": "P4.6.1",
+              "role_name": "Linux网络系统开发工程师",
+              "work_scope": "负责Linux网络子系统、内核网络功能和系统级网络开发"
+            },
+            {
+              "role_code": "P4.6.2",
+              "role_name": "网络协议栈开发工程师",
+              "work_scope": "负责TCP/IP协议栈、网络协议模块和高性能协议实现"
+            },
+            {
+              "role_code": "P4.6.3",
+              "role_name": "高性能网络软件工程师",
+              "work_scope": "负责DPDK、用户态网络、高速数据处理软件研发"
+            },
+            {
+              "role_code": "P4.6.4",
+              "role_name": "eBPF开发工程师",
+              "work_scope": "负责eBPF程序开发、内核可观测性和网络扩展功能开发"
+            },
+            {
+              "role_code": "P4.6.5",
+              "role_name": "系统软件开发工程师",
+              "work_scope": "负责操作系统、中间件、基础软件和网络基础组件开发"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "P5",
+      "family_name": "物联网、边缘智能与行业通信应用",
+      "directions": [
+        {
+          "direction_code": "P5.1",
+          "direction_name": "智能终端与物联网设备开发",
+          "roles": [
+            {
+              "role_code": "P5.1.1",
+              "role_name": "嵌入式软件工程师",
+              "work_scope": "负责嵌入式设备应用程序开发，包括MCU程序、设备控制逻辑和终端软件开发"
+            },
+            {
+              "role_code": "P5.1.2",
+              "role_name": "嵌入式Linux工程师",
+              "work_scope": "负责嵌入式Linux系统裁剪、系统移植、配置优化与系统开发"
+            },
+            {
+              "role_code": "P5.1.3",
+              "role_name": "BSP与驱动开发工程师",
+              "work_scope": "负责芯片启动、硬件适配、设备驱动和底层系统开发"
+            },
+            {
+              "role_code": "P5.1.4",
+              "role_name": "智能硬件工程师",
+              "work_scope": "负责智能设备硬件设计、电路开发与硬件调试"
+            },
+            {
+              "role_code": "P5.1.5",
+              "role_name": "IoT终端开发工程师",
+              "work_scope": "负责物联网终端开发、设备联网与数据交互实现"
+            }
+          ]
+        },
+        {
+          "direction_code": "P5.2",
+          "direction_name": "物联网平台与系统集成",
+          "roles": [
+            {
+              "role_code": "P5.2.1",
+              "role_name": "物联网平台开发工程师",
+              "work_scope": "负责IoT云平台、设备管理平台、数据接入平台开发"
+            },
+            {
+              "role_code": "P5.2.2",
+              "role_name": "物联网系统集成工程师",
+              "work_scope": "负责设备、网络、平台和业务系统整体集成"
+            },
+            {
+              "role_code": "P5.2.3",
+              "role_name": "物联网应用开发工程师",
+              "work_scope": "负责物联网业务应用、管理系统和行业软件开发"
+            }
+          ]
+        },
+        {
+          "direction_code": "P5.3",
+          "direction_name": "边缘计算与边缘智能",
+          "roles": [
+            {
+              "role_code": "P5.3.1",
+              "role_name": "边缘计算工程师",
+              "work_scope": "负责边缘节点、边缘平台、云边协同系统设计和开发"
+            },
+            {
+              "role_code": "P5.3.2",
+              "role_name": "边缘AI工程师",
+              "work_scope": "负责边缘设备AI模型部署、优化和智能应用开发"
+            },
+            {
+              "role_code": "P5.3.3",
+              "role_name": "端侧AI工程师",
+              "work_scope": "负责手机、机器人、智能终端等设备上的AI算法部署和优化"
+            },
+            {
+              "role_code": "P5.3.4",
+              "role_name": "边缘网关开发工程师",
+              "work_scope": "负责边缘网关软件、协议转换、设备接入和本地控制开发"
+            },
+            {
+              "role_code": "P5.3.5",
+              "role_name": "AI推理部署工程师",
+              "work_scope": "负责AI模型部署、推理优化、硬件加速和性能调优"
+            }
+          ]
+        },
+        {
+          "direction_code": "P5.4",
+          "direction_name": "工业互联网与工业通信",
+          "roles": [
+            {
+              "role_code": "P5.4.1",
+              "role_name": "工业互联网工程师",
+              "work_scope": "负责工业设备联网、工业平台建设和工业数字化系统开发"
+            },
+            {
+              "role_code": "P5.4.2",
+              "role_name": "工业网络工程师",
+              "work_scope": "负责工业现场网络规划、部署和工业通信保障"
+            },
+            {
+              "role_code": "P5.4.3",
+              "role_name": "工业通信协议工程师",
+              "work_scope": "负责工业通信协议开发、设备互联和协议适配"
+            },
+            {
+              "role_code": "P5.4.4",
+              "role_name": "确定性网络工程师",
+              "work_scope": "负责TSN、DetNet等低时延高可靠工业网络设计"
+            }
+          ]
+        },
+        {
+          "direction_code": "P5.5",
+          "direction_name": "智慧行业应用",
+          "roles": [
+            {
+              "role_code": "P5.5.1",
+              "role_name": "智慧城市解决方案工程师",
+              "work_scope": "负责智慧城市、智慧园区、城市物联网方案设计和实施"
+            },
+            {
+              "role_code": "P5.5.2",
+              "role_name": "行业数字化解决方案工程师",
+              "work_scope": "负责能源、医疗、教育等行业数字化方案设计"
+            },
+            {
+              "role_code": "P5.5.3",
+              "role_name": "智慧应用系统集成工程师",
+              "work_scope": "负责行业应用平台、设备、网络系统集成和交付"
+            },
+            {
+              "role_code": "P5.5.4",
+              "role_name": "车联网工程师",
+              "work_scope": "负责车联网平台、车辆通信和智能交通系统开发"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "families": 5,
+    "directions": 28,
+    "roles": 117
+  }
+}

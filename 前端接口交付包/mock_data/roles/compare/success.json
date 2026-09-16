@@ -1,0 +1,38 @@
+{
+  "roles": [
+    {
+      "role_code": "P1.1.1",
+      "role_name": "岗位A",
+      "work_scope": "范围A"
+    },
+    {
+      "role_code": "P1.1.2",
+      "role_name": "岗位B",
+      "work_scope": "范围B"
+    }
+  ],
+  "ability_difference": {
+    "common": [
+      "AU01"
+    ],
+    "only_a": [
+      "AU02"
+    ],
+    "only_b": [
+      "AU03"
+    ]
+  },
+  "tool_difference": {
+    "common": [
+      "TOOL01"
+    ],
+    "only_a": [
+      "TOOL02"
+    ],
+    "only_b": [
+      "TOOL03"
+    ]
+  },
+  "market": [],
+  "paths": []
+}

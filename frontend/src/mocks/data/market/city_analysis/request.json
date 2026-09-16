@@ -1,0 +1,7 @@
+{
+  "filters": {},
+  "options": {
+    "granularity": "day",
+    "limit": 10
+  }
+}

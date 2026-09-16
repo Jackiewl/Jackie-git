@@ -1,0 +1,8 @@
+{
+  "filters": {},
+  "options": {
+    "granularity": "day",
+    "limit": 10
+  },
+  "compare_previous_period": true
+}

@@ -1,0 +1,16 @@
+{
+  "roles": [
+    {
+      "role_code": "P1.1.1",
+      "role_name": "示例标准岗位",
+      "role_family_code": "F01",
+      "role_family_name": "示例岗位大类",
+      "direction_code": "D01",
+      "direction_name": "示例方向",
+      "work_scope": "负责通信系统相关工作",
+      "ability_count": 8,
+      "tool_count": 6,
+      "active_job_count": 950
+    }
+  ]
+}

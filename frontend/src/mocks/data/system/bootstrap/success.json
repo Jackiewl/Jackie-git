@@ -1,0 +1,20 @@
+{
+  "system_name": "学生就业与学习路径数据接口",
+  "api_version": "1.0.0",
+  "data_mode": "mock",
+  "default_filters": {
+    "recent_days": 30,
+    "region": "全国",
+    "job_status": "active"
+  },
+  "module_status": {
+    "market": "available",
+    "role_profile": "available",
+    "learning_path": "available"
+  },
+  "latest_refresh": {
+    "status": "mock",
+    "finished_at": "2026-09-15T08:00:00+08:00",
+    "data_version": "mock-v1"
+  }
+}

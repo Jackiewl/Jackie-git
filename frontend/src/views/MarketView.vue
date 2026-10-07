@@ -14,6 +14,12 @@
       <StatePanel v-if="loading && !overview" loading />
       <StatePanel v-else-if="error && !overview" :error="error" @retry="loadData" />
       <template v-else>
+        <section class="page-route-map" aria-label="就业决策链路">
+          <div class="page-route-map__node is-active"><span>01 / SIGNAL</span><strong>市场信号</strong><small>识别真实需求</small></div>
+          <RouterLink class="page-route-map__node glow-action" :to="{ name: 'roles', query: { from: 'workspace' } }"><span>02 / PORTRAIT</span><strong>岗位画像</strong><small>拆解能力与工具</small></RouterLink>
+          <RouterLink class="page-route-map__node glow-action" :to="{ name: 'learning', query: { role: 'P1.1.1', from: 'workspace' } }"><span>03 / ROUTE</span><strong>学习路径</strong><small>生成实践序列</small></RouterLink>
+          <RouterLink class="page-route-map__node glow-action" :to="{ name: 'roles', query: { role: 'P1.1.1', from: 'workspace' } }"><span>04 / REVIEW</span><strong>岗位对照</strong><small>校准目标差距</small></RouterLink>
+        </section>
         <section class="metric-grid" aria-label="市场概览">
           <article v-for="item in metrics" :key="item.label" class="metric-card" :class="`metric-card--${item.tone}`">
             <div class="metric-card__label"><component :is="item.icon" :size="17" />{{ item.label }}</div>

@@ -13,8 +13,8 @@ const router = createRouter({
         { path: "/workspace", name: "workspace", component: () => import("@/views/MarketView.vue") },
         { path: "/roles", name: "roles", component: () => import("@/views/RolesView.vue") },
         { path: "/relations", redirect: "/roles" },
-        { path: "/learning", name: "learning", component: () => import("@/views/LearningView.vue") },
-        { path: "/learning/route", name: "learning-route", component: () => import("@/views/LearningRouteView.vue") },
+        { path: "/learning", name: "learning", component: () => import("@/views/LearningRouteView.vue") },
+        { path: "/learning/route", redirect: (to) => ({ name: "learning", query: to.query, hash: to.hash }) },
         { path: "/admin", name: "admin", component: () => import("@/views/AdminView.vue") },
       ],
     },
@@ -29,7 +29,6 @@ router.afterEach((to) => {
     workspace: "学生工作台",
     roles: "岗位画像",
     learning: "学习路径",
-    "learning-route": "标准学习路线",
     admin: "系统管理",
   };
   document.title = `${titles[String(to.name)] ?? "大学生就业画像"} - 就业智能体`;

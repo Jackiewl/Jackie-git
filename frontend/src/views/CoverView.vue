@@ -12,8 +12,8 @@
           <h1 id="command-title">让每一次实践，<br />都能照亮一块能力模块。</h1>
           <p>从 117 个标准岗位出发，把岗位要求拆成能力、工具与任务。选择目标，完成实践，观察训练贡献如何进入你的成长图谱。</p>
           <div class="command-hero__actions">
-            <el-button type="primary" :icon="LayoutDashboard" @click="goWorkspace">进入学生工作台</el-button>
-            <el-button :icon="MapPinned" @click="goRoles">探索岗位画像</el-button>
+            <el-button class="glow-action" type="primary" :icon="LayoutDashboard" @click="goWorkspace">进入学生工作台</el-button>
+            <el-button class="glow-action" :icon="MapPinned" @click="goRoles">探索岗位画像</el-button>
           </div>
           <div class="cover-hero__signal"><span></span>向下滚动，查看岗位到学习路径的完整链路</div>
         </div>
@@ -75,8 +75,10 @@
               <div><dt>技术工具</dt><dd>201</dd><span>工程工具标准库</span></div>
             </dl>
             <div class="cover-signal__actions">
-              <el-button type="primary" :icon="LayoutDashboard" @click="goWorkspace">进入学生工作台</el-button>
-              <el-button :icon="MapPinned" @click="goRoles">探索岗位画像</el-button>
+              <el-button class="glow-action" type="primary" :icon="LayoutDashboard" @click="goWorkspace">进入学生工作台</el-button>
+              <el-button class="glow-action" :icon="MapPinned" @click="goRoles">探索岗位画像</el-button>
+              <el-button class="glow-action" :icon="Route" @click="goLearning">查看标准学习路径</el-button>
+              <el-button class="glow-action" :icon="Route" @click="goLearning">查看标准学习路径</el-button>
             </div>
           </div>
         </div>
@@ -141,7 +143,7 @@
 import { computed, onMounted, ref } from "vue";
 import dayjs from "dayjs";
 import { useRouter } from "vue-router";
-import { BarChart3, Layers3, LayoutDashboard, MapPinned, Orbit, Radar, RefreshCw, Waypoints } from "lucide-vue-next";
+import { BarChart3, Layers3, LayoutDashboard, MapPinned, Orbit, Radar, RefreshCw, Route, Waypoints } from "lucide-vue-next";
 import { marketApi } from "@/api/services";
 import EChart from "@/components/charts/EChart.vue";
 import StatePanel from "@/components/common/StatePanel.vue";
@@ -229,8 +231,9 @@ async function loadMarket() {
   finally { marketLoading.value = false; }
 }
 
-function goWorkspace() { void router.push("/workspace"); }
-function goRoles() { void router.push("/roles"); }
+function goWorkspace() { void router.push({ path: "/workspace", query: { from: "cover" } }); }
+function goRoles() { void router.push({ path: "/roles", query: { from: "cover" } }); }
+function goLearning() { void router.push({ path: "/learning", query: { role: "P1.1.1", from: "cover" } }); }
 
 onMounted(async () => {
   try {

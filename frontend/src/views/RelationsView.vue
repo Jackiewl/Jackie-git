@@ -157,7 +157,9 @@ function makeAbility(code: string, kind: AbilityKind, index: number): AbilityNod
   const fallbackLabel = kind === "shared"
     ? profileA.value?.ability_groups[index]?.ability_unit_name
     : profileAbilities?.[index + 1]?.ability_unit_name;
-  return { code, label: abilityLabelMap.value.get(code) ?? fallbackLabel ?? `${labels[kind]}能力`, weight, kind, kindLabel: labels[kind], x: 0, y: 0 };
+  const roleLabel = kind === "a" ? roleAName.value : roleBName.value;
+  const displayLabel = abilityLabelMap.value.get(code) ?? fallbackLabel ?? `${labels[kind]}能力`;
+  return { code, label: kind === "shared" ? displayLabel : `${displayLabel} · ${roleLabel}`, weight, kind, kindLabel: labels[kind], x: 0, y: 0 };
 }
 
 const sharedAbilities = computed(() => (comparison.value?.ability_difference.common ?? []).map((code, index) => makeAbility(code, "shared", index)));

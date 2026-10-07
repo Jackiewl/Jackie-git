@@ -1,11 +1,11 @@
 {
   "task": {
     "task_code": "PB-01",
-    "task_name": "示例实践任务",
+    "task_name": "Linux 工程环境搭建与验证",
     "task_level": "PB",
-    "engineering_background": "任务背景",
-    "task_objective": "任务目标",
-    "task_content": "任务内容"
+    "engineering_background": "通信软件与网络工具通常运行在 Linux 环境中，稳定、可复现的工程环境是后续实验和项目交付的基础。",
+    "task_objective": "完成一套可复现的 Linux 通信工程开发环境，并形成验证记录。",
+    "task_content": "安装基础工具链，完成网络与权限配置，运行最小验证程序并提交环境说明。"
   },
   "courses": [
     {
@@ -18,30 +18,72 @@
     {
       "step_no": 1,
       "subitem_code": "1.1",
-      "original_text": "完成环境搭建",
-      "detail_text": "按照要求完成配置",
-      "acceptance_criteria": "环境正常运行"
+      "original_text": "完成 Linux 工程环境搭建",
+      "detail_text": "安装开发工具链，完成网络、权限与版本配置，并运行验证脚本。",
+      "acceptance_criteria": "环境可复现，验证脚本正常运行，关键过程有截图或日志证据"
     }
   ],
   "outputs": [
     {
-      "output_text": "实践报告"
+      "output_text": "环境配置 README 与验证报告"
     }
   ],
   "micro_abilities": [
     {
-      "micro_ability_code": "MA01",
-      "micro_ability_name": "示例微能力",
+      "micro_ability_code": "A2-01-M01",
+      "micro_ability_name": "工程环境搭建",
       "training_value": 0.8,
       "training_label": "强训练"
+    },
+    {
+      "micro_ability_code": "A2-01-M02",
+      "micro_ability_name": "配置与参数管理",
+      "training_value": 0.6,
+      "training_label": "主要训练"
+    },
+    {
+      "micro_ability_code": "A4-02-M01",
+      "micro_ability_name": "运行验证与调试",
+      "training_value": 0.6,
+      "training_label": "主要训练"
+    },
+    {
+      "micro_ability_code": "A6-01-M03",
+      "micro_ability_name": "过程证据记录",
+      "training_value": 0.4,
+      "training_label": "辅助训练"
+    },
+    {
+      "micro_ability_code": "A7-01-M02",
+      "micro_ability_name": "技术文档表达",
+      "training_value": 0.4,
+      "training_label": "辅助训练"
     }
   ],
   "tools": [
     {
-      "tool_code": "TOOL01",
-      "tool_name": "示例工具",
+      "tool_code": "TT-OS-001",
+      "tool_name": "Linux",
       "improvement_value": 0.6,
       "improvement_label": "主要提升"
+    },
+    {
+      "tool_code": "TT-DEV-002",
+      "tool_name": "Git",
+      "improvement_value": 0.4,
+      "improvement_label": "辅助提升"
+    },
+    {
+      "tool_code": "TT-DEV-003",
+      "tool_name": "Docker",
+      "improvement_value": 0.4,
+      "improvement_label": "辅助提升"
+    },
+    {
+      "tool_code": "TT-DEV-004",
+      "tool_name": "VS Code",
+      "improvement_value": 0.2,
+      "improvement_label": "基础接触"
     }
   ],
   "prerequisite_tasks": []

@@ -2,25 +2,28 @@
   <div class="learning-page">
     <section class="learning-selector">
       <div>
-        <span>TARGET ROLE</span>
+        <span>目标岗位</span>
         <h2>选择目标岗位</h2>
       </div>
-      <el-select v-model="selectedRole" filterable placeholder="搜索 117 个标准岗位" @change="loadPath">
-        <el-option v-for="role in system.roles" :key="role.role_code" :label="`${role.role_name} · ${role.role_code}`" :value="role.role_code" />
-      </el-select>
+      <RoleSelector v-model="selectedRole" @change="loadPath" />
+      <el-button class="learning-selector__open" type="primary" :icon="Route" :disabled="!path" @click="openRoutePage">打开标准学习路线</el-button>
     </section>
 
     <StatePanel v-if="loading" loading />
     <StatePanel v-else-if="error" :error="error" @retry="loadPath" />
     <template v-else-if="path">
+      <section v-if="focusedAbility" class="ability-focus-banner">
+        <div><span>ABILITY FOCUS</span><strong>从岗位画像带入：{{ focusedAbility }}</strong><p>下面的任务按 PB → PF → JP → CP 展开，点击任务可查看具体步骤、T 训练贡献和 d 工具提升度。</p></div>
+        <el-button text @click="clearAbilityFocus">清除聚焦</el-button>
+      </section>
       <section class="path-overview">
         <div class="path-overview__role">
-          <span>{{ path.role.role_code }} · {{ path.role.direction_name }}</span>
+          <span>{{ path.role.direction_name }}</span>
           <h2>{{ path.role.role_name }}</h2>
           <p>标准学习路径覆盖 {{ path.summary.total_task_count }} 项实践任务，其中 {{ path.summary.main_task_count }} 项为主任务。</p>
         </div>
         <div class="coverage-ring">
-          <el-progress type="dashboard" :percentage="path.coverage.overall_satisfaction * 100" :width="118" :stroke-width="10" color="#136f63">
+          <el-progress type="dashboard" :percentage="path.coverage.overall_satisfaction * 100" :width="118" :stroke-width="10" color="#2563eb">
             <template #default="{ percentage }"><strong>{{ Math.round(percentage) }}%</strong><span>综合覆盖</span></template>
           </el-progress>
         </div>
@@ -30,7 +33,7 @@
       </section>
 
       <section class="path-section">
-        <div class="section-heading"><div><span>PB / PF / JP / CP</span><h2>标准学习路线</h2></div><p>由公共基础逐步进入综合岗位实践</p></div>
+        <div class="section-heading"><div><span>四阶段培养</span><h2>标准学习路线</h2></div><p>PB / PF / JP / CP</p></div>
         <div class="stage-flow">
           <article v-for="stage in path.stages" :key="stage.stage_code" class="stage-column">
             <div class="stage-column__head">
@@ -38,8 +41,8 @@
               <div><h3>{{ stage.stage_name }}</h3><span>阶段 {{ stage.stage_order }}</span></div>
             </div>
             <div class="stage-column__tasks">
-              <button v-for="task in stage.tasks" :key="task.task_code" class="task-card" @click="openTask(task.task_code)">
-                <div><span>{{ task.task_code }}</span><el-tag size="small" :type="task.task_role === 'main' ? 'success' : 'info'">{{ task.task_role === "main" ? "主任务" : "补充" }}</el-tag></div>
+              <button v-for="task in stage.tasks" :key="task.task_code" class="task-card" :class="{ 'task-card--focus': focusedAbility && isAbilityTask(task.task_code) }" @click="openTask(task.task_code)">
+                <div><el-tag size="small" :type="task.task_role === 'main' ? 'success' : 'info'">{{ task.task_role === "main" ? "主任务" : "补充" }}</el-tag></div>
                 <h4>{{ task.task_name }}</h4><p>{{ task.selection_reason }}</p><ArrowUpRight :size="16" />
               </button>
               <div v-if="!stage.tasks.length" class="stage-empty">当前阶段暂无任务</div>
@@ -54,7 +57,8 @@
       <StatePanel v-if="taskLoading" loading />
       <StatePanel v-else-if="taskError" :error="taskError" @retry="activeTaskCode && openTask(activeTaskCode)" />
       <div v-else-if="taskDetail" class="task-detail">
-        <div class="task-detail__head"><span>{{ taskDetail.task.task_level }} · {{ taskDetail.task.task_code }}</span><h2>{{ taskDetail.task.task_name }}</h2><p>{{ taskDetail.task.task_objective }}</p></div>
+        <el-button class="task-detail__close" :icon="X" circle aria-label="关闭任务详情" @click="drawerOpen = false" />
+        <div class="task-detail__head"><span>{{ taskDetail.task.task_level }}</span><h2>{{ taskDetail.task.task_name }}</h2><p>{{ taskDetail.task.task_objective }}</p></div>
         <section><h3>工程背景</h3><p>{{ taskDetail.task.engineering_background }}</p></section>
         <section><h3>任务内容</h3><p>{{ taskDetail.task.task_content }}</p></section>
         <section><h3>实施步骤与验收</h3><ol class="step-list"><li v-for="step in taskDetail.steps" :key="step.subitem_code"><b>{{ step.step_no }}</b><div><strong>{{ step.original_text }}</strong><p>{{ step.detail_text }}</p><small>验收：{{ step.acceptance_criteria }}</small></div></li></ol></section>
@@ -68,14 +72,17 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
-import { useRoute } from "vue-router";
-import { ArrowUpRight } from "lucide-vue-next";
+import { useRoute, useRouter } from "vue-router";
+import { ArrowUpRight, X } from "lucide-vue-next";
+import { Route } from "lucide-vue-next";
 import { learningApi } from "@/api/services";
 import StatePanel from "@/components/common/StatePanel.vue";
+import RoleSelector from "@/components/learning/RoleSelector.vue";
 import { useSystemStore } from "@/stores/system";
 import type { LearningPathData, TaskDetailData } from "@/types/api";
 
 const route = useRoute();
+const router = useRouter();
 const system = useSystemStore();
 const selectedRole = ref("");
 const path = ref<LearningPathData | null>(null);
@@ -86,6 +93,7 @@ const taskLoading = ref(false);
 const taskError = ref("");
 const activeTaskCode = ref("");
 const taskDetail = ref<TaskDetailData | null>(null);
+const focusedAbility = computed(() => typeof route.query.ability === "string" ? route.query.ability : "");
 const coverageItems = computed(() => path.value ? [
   { label: "微能力加权满足度", value: path.value.coverage.micro_ability_weighted_satisfaction },
   { label: "核心微能力通过率", value: path.value.coverage.core_micro_ability_pass_rate },
@@ -104,6 +112,22 @@ async function openTask(code: string) {
   try { taskDetail.value = await learningApi.task(code); }
   catch (caught) { taskError.value = caught instanceof Error ? caught.message : "任务详情加载失败"; }
   finally { taskLoading.value = false; }
+}
+function isAbilityTask(code: string) {
+  const map: Record<string, string[]> = {
+    "A1-02": ["JP-P1-04", "JP-P1-10"],
+    "A2-01": ["PB-02", "PB-04", "PB-07"],
+    "A5-04": ["JP-P1-10", "CP-06"],
+    "A8-04": ["PF1-13", "JP-P1-02"],
+    "B1-06": ["JP-P1-03", "JP-P1-09", "CP-10"],
+  };
+  return map[focusedAbility.value]?.includes(code) ?? false;
+}
+function clearAbilityFocus() {
+  void router.replace({ path: "/learning", query: { role: selectedRole.value } });
+}
+function openRoutePage() {
+  void router.push({ path: "/learning/route", query: { role: selectedRole.value, ...(focusedAbility.value ? { ability: focusedAbility.value } : {}) } });
 }
 function resolveInitialRole() {
   const fromQuery = typeof route.query.role === "string" ? route.query.role : "";

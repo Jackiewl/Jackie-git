@@ -2,14 +2,14 @@
   "roles": [
     {
       "role_code": "P1.1.1",
-      "role_name": "示例标准岗位",
-      "role_family_code": "F01",
-      "role_family_name": "示例岗位大类",
-      "direction_code": "D01",
-      "direction_name": "示例方向",
-      "work_scope": "负责通信系统相关工作",
-      "ability_count": 8,
-      "tool_count": 6,
+      "role_name": "无线通信算法工程师",
+      "role_family_code": "P1",
+      "role_family_name": "通信系统、设备与核心技术研发",
+      "direction_code": "P1.1",
+      "direction_name": "无线通信算法与系统研发",
+      "work_scope": "负责无线通信核心算法设计，包括物理层算法、信号处理算法、信道估计、编码调制与 MIMO 算法",
+      "ability_count": 5,
+      "tool_count": 11,
       "active_job_count": 950
     }
   ]

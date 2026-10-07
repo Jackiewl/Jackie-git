@@ -163,6 +163,12 @@ export interface RoleProfileData {
       micro_ability_code: string;
       micro_ability_name: string;
       definition: string;
+      learning_tasks?: Array<{
+        task_code: string;
+        task_name: string;
+        stage_code: "PB" | "PF" | "JP" | "CP";
+        training_value: number;
+      }>;
     }>;
   }>;
   tools: Array<{
@@ -217,6 +223,7 @@ export interface LearningPathData {
       task_name: string;
       task_role: "main" | "supplement";
       selection_reason: string;
+      task_order?: number;
     }>;
   }>;
 }

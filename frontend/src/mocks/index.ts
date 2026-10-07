@@ -14,6 +14,7 @@ import relations from "./data/roles/relations/success.json";
 import compare from "./data/roles/compare/success.json";
 import learningPath from "./data/learning_path/query/success.json";
 import taskDetail from "./data/practice_tasks/detail/success.json";
+import { getFormalTaskDetail } from "./data/practice_tasks/details";
 
 const mockByPath: Record<ApiPath, unknown> = {
   [endpoints.bootstrap]: bootstrap,
@@ -33,7 +34,12 @@ const mockByPath: Record<ApiPath, unknown> = {
   [endpoints.taskDetail]: taskDetail,
 };
 
-export function getMockData<T>(path: ApiPath): T {
+export function getMockData<T>(path: ApiPath, payload?: unknown): T {
+  if (path === endpoints.taskDetail) {
+    const taskCode = typeof payload === "object" && payload !== null && "task_code" in payload ? String((payload as { task_code: unknown }).task_code) : "";
+    const formalDetail = getFormalTaskDetail(taskCode);
+    if (formalDetail) return structuredClone(formalDetail) as T;
+  }
   const value = mockByPath[path];
   if (value === undefined) throw new Error(`未找到接口 Mock：${path}`);
   return structuredClone(value) as T;

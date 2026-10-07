@@ -2,11 +2,10 @@
   "taxonomy_level": "family",
   "total": 11275,
   "items": [
-    {
-      "code": "F01",
-      "name": "示例岗位大类",
-      "job_count": 2600,
-      "percentage": 0.2306
-    }
+    { "code": "P1", "name": "通信系统、设备与核心技术研发", "job_count": 2925, "percentage": 0.2594 },
+    { "code": "P2", "name": "通信网络规划与基础设施建设", "job_count": 2500, "percentage": 0.2217 },
+    { "code": "P3", "name": "通信网络运营与智能运维", "job_count": 1900, "percentage": 0.1685 },
+    { "code": "P4", "name": "网络软件与云化通信平台开发", "job_count": 2200, "percentage": 0.1951 },
+    { "code": "P5", "name": "物联网、边缘智能与行业通信应用", "job_count": 1750, "percentage": 0.1552 }
   ]
 }

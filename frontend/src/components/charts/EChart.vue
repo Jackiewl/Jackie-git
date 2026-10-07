@@ -5,12 +5,12 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, shallowRef, watch } from "vue";
 import * as echarts from "echarts/core";
-import { BarChart, GraphChart, LineChart, PieChart } from "echarts/charts";
-import { DatasetComponent, GridComponent, LegendComponent, TitleComponent, TooltipComponent } from "echarts/components";
+import { BarChart, GraphChart, LineChart, PieChart, RadarChart } from "echarts/charts";
+import { DatasetComponent, GridComponent, LegendComponent, RadarComponent, TitleComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
 import type { EChartsCoreOption } from "echarts/core";
 
-echarts.use([BarChart, GraphChart, LineChart, PieChart, DatasetComponent, GridComponent, LegendComponent, TitleComponent, TooltipComponent, CanvasRenderer]);
+echarts.use([BarChart, GraphChart, LineChart, PieChart, RadarChart, DatasetComponent, GridComponent, LegendComponent, RadarComponent, TitleComponent, TooltipComponent, CanvasRenderer]);
 
 const props = withDefaults(defineProps<{ option: EChartsCoreOption; ariaLabel?: string }>(), {
   ariaLabel: "数据可视化图表",

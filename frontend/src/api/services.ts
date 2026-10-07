@@ -28,7 +28,7 @@ export const systemApi = {
 export const marketApi = {
   overview: (filters: MarketFilters) => postApi<MarketOverviewData, { filters: MarketFilters }>(endpoints.marketOverview, { filters }),
   trend: (filters: MarketFilters, granularity: string) => postApi<TrendData, object>(endpoints.marketTrend, { filters, options: { granularity, limit: 30 }, compare_previous_period: true }),
-  distribution: (filters: MarketFilters) => postApi<DistributionData, object>(endpoints.roleDistribution, { filters, taxonomy_level: "family" }),
+  distribution: (filters: MarketFilters, taxonomy_level: "family" | "direction" = "family") => postApi<DistributionData, object>(endpoints.roleDistribution, { filters, taxonomy_level }),
   ranking: (filters: MarketFilters) => postApi<RankingData, object>(endpoints.roleRanking, { filters, ranking_type: "demand", limit: 10 }),
   cities: (filters: MarketFilters, granularity: string) => postApi<CityData, object>(endpoints.cityAnalysis, { filters, options: { granularity, limit: 10 } }),
   requirements: (filters: MarketFilters) => postApi<RequirementsData, object>(endpoints.requirements, { filters, dimensions: ["salary", "education", "experience", "industry", "company"] }),

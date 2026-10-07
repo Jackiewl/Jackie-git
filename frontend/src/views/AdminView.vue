@@ -1,7 +1,7 @@
 <template>
   <div class="admin-page">
     <section class="admin-summary">
-      <div><span>ADMIN CONSOLE</span><h2>管理端接口待接入</h2><p>学生端 15 个数据接口已完成前端适配。用户管理、岗位数据维护、统计重算和操作日志尚未包含在当前接口交付包中。</p></div>
+      <div><span>系统管理</span><h2>管理端接口待接入</h2><p>学生端 15 个数据接口已完成前端适配。用户管理、岗位数据维护、统计重算和操作日志尚未包含在当前接口交付包中。</p></div>
       <ShieldCheck :size="48" />
     </section>
     <section class="admin-grid">

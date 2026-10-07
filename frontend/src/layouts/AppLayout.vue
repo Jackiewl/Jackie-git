@@ -1,28 +1,22 @@
 <template>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <RouterLink class="brand" to="/market" aria-label="大学生就业画像平台">
-        <span class="brand__mark"><Radar :size="21" /></span>
-        <span class="brand__copy"><strong>职途镜像</strong><small>就业画像平台</small></span>
-      </RouterLink>
-
-      <nav class="nav" aria-label="主导航">
-        <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" class="nav__item">
-          <component :is="item.icon" :size="18" />
-          <span>{{ item.label }}</span>
-        </RouterLink>
-      </nav>
-
-      <div class="sidebar__status">
-        <span class="status-dot" :class="{ 'status-dot--live': !apiRuntime.useMock }"></span>
-        <span>{{ apiRuntime.useMock ? "Mock 数据" : "实时接口" }}</span>
-      </div>
-    </aside>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="app-shell" :class="{ 'app-shell--workspace': route.name === 'workspace' }">
+    <TopNavigation>
+      <template #tools>
+        <span class="runtime-badge" :class="{ 'runtime-badge--live': !apiRuntime.useMock }">
+          <span class="status-dot" :class="{ 'status-dot--live': !apiRuntime.useMock }"></span>
+          {{ apiRuntime.useMock ? "演示模式" : "实时数据" }}
+        </span>
+        <el-tooltip content="刷新基础数据" placement="bottom">
+          <el-button :icon="RefreshCw" circle :loading="system.loading" @click="system.initialize(true)" />
+        </el-tooltip>
+      </template>
+    </TopNavigation>
 
     <div class="workspace">
       <header class="topbar">
-        <div>
-          <p class="topbar__eyebrow">STUDENT LABOR MARKET INTELLIGENCE</p>
+        <div class="topbar__title">
+          <p class="topbar__eyebrow">就业决策工作台 <ChevronRight :size="12" /> {{ current.title }}</p>
           <h1>{{ current.title }}</h1>
           <p>{{ current.description }}</p>
         </div>
@@ -32,13 +26,10 @@
             <span>数据更新</span>
             <strong>{{ updatedAt }}</strong>
           </div>
-          <el-tooltip content="刷新基础数据" placement="bottom">
-            <el-button :icon="RefreshCw" circle :loading="system.loading" @click="system.initialize(true)" />
-          </el-tooltip>
         </div>
       </header>
 
-      <main class="page-content">
+      <main id="main-content" class="page-content" tabindex="-1">
         <StatePanel v-if="system.error" :error="system.error" @retry="system.initialize(true)" />
         <RouterView v-else />
       </main>
@@ -50,37 +41,23 @@
 import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import dayjs from "dayjs";
-import {
-  BookOpenCheck,
-  Database,
-  GitCompareArrows,
-  MapPinned,
-  Radar,
-  RefreshCw,
-  Settings,
-  TrendingUp,
-} from "lucide-vue-next";
+import { ChevronRight, Database, RefreshCw } from "lucide-vue-next";
 import { apiRuntime } from "@/api/client";
 import StatePanel from "@/components/common/StatePanel.vue";
+import TopNavigation from "@/components/navigation/TopNavigation.vue";
 import { useSystemStore } from "@/stores/system";
 
 const route = useRoute();
 const system = useSystemStore();
-const navItems = [
-  { to: "/market", label: "就业市场", icon: TrendingUp },
-  { to: "/roles", label: "岗位画像", icon: MapPinned },
-  { to: "/relations", label: "岗位关系", icon: GitCompareArrows },
-  { to: "/learning", label: "学习路径", icon: BookOpenCheck },
-  { to: "/admin", label: "系统管理", icon: Settings },
-];
 const pageMeta: Record<string, { title: string; description: string }> = {
-  market: { title: "就业市场", description: "追踪招聘需求、岗位变化与企业用人门槛" },
+  workspace: { title: "学生工作台", description: "连接岗位信号、实践任务与能力成长" },
   roles: { title: "岗位画像", description: "从职责边界、核心能力与工具要求认识目标岗位" },
   relations: { title: "岗位关系", description: "辨析相近岗位的能力边界与发展差异" },
   learning: { title: "学习路径", description: "依据岗位标准画像组织能力与实践任务" },
+  "learning-route": { title: "标准学习路线", description: "按 PB / PF / JP / CP 展开岗位实践任务与工具链" },
   admin: { title: "系统管理", description: "查看数据服务状态与管理接口接入进度" },
 };
-const current = computed(() => pageMeta[String(route.name)] ?? pageMeta.market!);
+const current = computed(() => pageMeta[String(route.name)] ?? pageMeta.workspace!);
 const updatedAt = computed(() => {
   const date = system.bootstrap?.latest_refresh.finished_at;
   return date ? dayjs(date).format("MM-DD HH:mm") : "--";

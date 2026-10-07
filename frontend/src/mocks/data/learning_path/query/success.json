@@ -1,52 +1,46 @@
 {
-  "role": {
-    "role_code": "P1.1.1",
-    "role_name": "示例岗位",
-    "direction_name": "示例方向"
-  },
-  "summary": {
-    "total_task_count": 4,
-    "main_task_count": 3,
-    "supplement_task_count": 1
-  },
+  "role": { "role_code": "P1.1.1", "role_name": "无线通信算法工程师", "direction_name": "无线通信算法与系统研发" },
+  "summary": { "total_task_count": 13, "main_task_count": 4, "supplement_task_count": 9 },
   "coverage": {
-    "micro_ability_weighted_satisfaction": 0.86,
-    "core_micro_ability_pass_rate": 0.91,
-    "tool_weighted_satisfaction": 0.82,
-    "core_tool_pass_rate": 0.88,
-    "overall_satisfaction": 0.85
+    "micro_ability_weighted_satisfaction": 1,
+    "core_micro_ability_pass_rate": 1,
+    "tool_weighted_satisfaction": 0.9285714286,
+    "core_tool_pass_rate": 1,
+    "overall_satisfaction": 0.9642857143
   },
   "stages": [
     {
-      "stage_code": "PB",
-      "stage_name": "公共基础",
-      "stage_order": 1,
+      "stage_code": "PB", "stage_name": "公共基础", "stage_order": 1,
       "tasks": [
-        {
-          "task_code": "PB-01",
-          "task_name": "示例实践任务",
-          "task_role": "main",
-          "selection_reason": "覆盖核心能力"
-        }
+        { "task_code": "PB-07", "task_name": "网络程序设计实践", "task_role": "main", "task_order": 1, "selection_reason": "稳健主路径；依赖边均为核心/推荐前置，训练程序设计与网络通信基础。" },
+        { "task_code": "PB-02", "task_name": "Python程序设计与工程数据处理实践", "task_role": "supplement", "task_order": 7, "selection_reason": "移除后不满足能力单元阈值、可达核心微能力与微能力覆盖率 85%。" },
+        { "task_code": "PB-04", "task_name": "数据结构与算法工程实践", "task_role": "supplement", "task_order": 8, "selection_reason": "补足算法设计、数据结构应用和工程代码实现能力。" }
       ]
     },
     {
-      "stage_code": "PF",
-      "stage_name": "专业基础",
-      "stage_order": 2,
-      "tasks": []
+      "stage_code": "PF", "stage_name": "专业基础", "stage_order": 2,
+      "tasks": [
+        { "task_code": "PF3-07", "task_name": "微服务通信系统开发实践", "task_role": "main", "task_order": 2, "selection_reason": "稳健主路径；建立通信服务拆分、接口协作和工程交付基础。" },
+        { "task_code": "PF1-13", "task_name": "DSP通信算法工程实现实践", "task_role": "supplement", "task_order": 10, "selection_reason": "补强 DSP 实现、定点化和程序优化能力。" }
+      ]
     },
     {
-      "stage_code": "JP",
-      "stage_name": "岗位实践",
-      "stage_order": 3,
-      "tasks": []
+      "stage_code": "JP", "stage_name": "岗位实践", "stage_order": 3,
+      "tasks": [
+        { "task_code": "JP-P1-07", "task_name": "5G核心网功能模块开发实践", "task_role": "main", "task_order": 3, "selection_reason": "稳健主路径；主 JP 任务属于 P1 岗位族，形成通信模块开发闭环。" },
+        { "task_code": "JP-P1-03", "task_name": "MIMO通信算法实践", "task_role": "supplement", "task_order": 5, "selection_reason": "补足岗位定义性核心技术工具 MIMO 的独立应用。" },
+        { "task_code": "JP-P1-09", "task_name": "通感一体化系统实践", "task_role": "supplement", "task_order": 6, "selection_reason": "补足无线信号处理核心微能力和跨系统验证经验。" },
+        { "task_code": "JP-P1-04", "task_name": "5G NR链路级仿真实践", "task_role": "supplement", "task_order": 9, "selection_reason": "补足 5G NR、Sionna 与链路级仿真工具链。" },
+        { "task_code": "JP-P1-02", "task_name": "OFDM系统设计实践", "task_role": "supplement", "task_order": 12, "selection_reason": "补足岗位定义性核心技术工具 OFDM 的系统设计与验证。" },
+        { "task_code": "JP-P1-10", "task_name": "通信系统原型验证实践", "task_role": "supplement", "task_order": 13, "selection_reason": "补足工程验证与评价能力，形成原型交付证据。" }
+      ]
     },
     {
-      "stage_code": "CP",
-      "stage_name": "综合实践",
-      "stage_order": 4,
-      "tasks": []
+      "stage_code": "CP", "stage_name": "综合实践", "stage_order": 4,
+      "tasks": [
+        { "task_code": "CP-06", "task_name": "虚拟5G专网规划、部署与优化综合实践", "task_role": "main", "task_order": 4, "selection_reason": "稳健主路径；将算法、网络、部署和优化能力汇入完整工程交付。" },
+        { "task_code": "CP-10", "task_name": "通信网络创新挑战项目实践", "task_role": "supplement", "task_order": 11, "selection_reason": "补足跨模块协同、性能评价和创新项目交付能力。" }
+      ]
     }
   ]
 }

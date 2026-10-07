@@ -1,24 +1,23 @@
 {
   "salary": [
-    {
-      "label": "10K-15K",
-      "count": 1200,
-      "percentage": 0.24
-    }
+    { "label": "5K-8K", "count": 900, "percentage": 0.18 },
+    { "label": "8K-10K", "count": 1100, "percentage": 0.22 },
+    { "label": "10K-15K", "count": 1200, "percentage": 0.24 },
+    { "label": "15K-20K", "count": 900, "percentage": 0.18 },
+    { "label": "20K以上", "count": 900, "percentage": 0.18 }
   ],
   "education": [
-    {
-      "label": "本科",
-      "count": 2600,
-      "percentage": 0.52
-    }
+    { "label": "大专及以下", "count": 400, "percentage": 0.08 },
+    { "label": "本科", "count": 2600, "percentage": 0.52 },
+    { "label": "硕士", "count": 1700, "percentage": 0.34 },
+    { "label": "博士及以上", "count": 300, "percentage": 0.06 }
   ],
   "experience": [
-    {
-      "label": "1-3年",
-      "count": 1700,
-      "percentage": 0.34
-    }
+    { "label": "应届/无经验", "count": 1300, "percentage": 0.26 },
+    { "label": "1-3年", "count": 1700, "percentage": 0.34 },
+    { "label": "3-5年", "count": 1200, "percentage": 0.24 },
+    { "label": "5-10年", "count": 650, "percentage": 0.13 },
+    { "label": "10年以上", "count": 150, "percentage": 0.03 }
   ],
   "industry": [
     {

@@ -2,33 +2,37 @@ import { createRouter, createWebHistory } from "vue-router";
 import AppLayout from "@/layouts/AppLayout.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    { path: "/", name: "cover", component: () => import("@/views/CoverView.vue") },
     {
-      path: "/",
+      path: "/app",
       component: AppLayout,
       children: [
-        { path: "", redirect: "/market" },
-        { path: "market", name: "market", component: () => import("@/views/MarketView.vue") },
-        { path: "roles", name: "roles", component: () => import("@/views/RolesView.vue") },
-        { path: "relations", name: "relations", component: () => import("@/views/RelationsView.vue") },
-        { path: "learning", name: "learning", component: () => import("@/views/LearningView.vue") },
-        { path: "admin", name: "admin", component: () => import("@/views/AdminView.vue") },
+        { path: "", redirect: "/workspace" },
+        { path: "/workspace", name: "workspace", component: () => import("@/views/MarketView.vue") },
+        { path: "/roles", name: "roles", component: () => import("@/views/RolesView.vue") },
+        { path: "/relations", redirect: "/roles" },
+        { path: "/learning", name: "learning", component: () => import("@/views/LearningView.vue") },
+        { path: "/learning/route", name: "learning-route", component: () => import("@/views/LearningRouteView.vue") },
+        { path: "/admin", name: "admin", component: () => import("@/views/AdminView.vue") },
       ],
     },
-    { path: "/:pathMatch(.*)*", redirect: "/market" },
+    { path: "/market", redirect: "/workspace" },
+    { path: "/:pathMatch(.*)*", redirect: "/" },
   ],
 });
 
 router.afterEach((to) => {
   const titles: Record<string, string> = {
-    market: "就业市场",
+    cover: "首页",
+    workspace: "学生工作台",
     roles: "岗位画像",
-    relations: "岗位关系",
     learning: "学习路径",
+    "learning-route": "标准学习路线",
     admin: "系统管理",
   };
-  document.title = `${titles[String(to.name)] ?? "大学生就业画像"} - 大学生就业画像平台`;
+  document.title = `${titles[String(to.name)] ?? "大学生就业画像"} - 就业智能体`;
 });
 
 export default router;

@@ -1,13 +1,11 @@
 {
   "cities": [
-    {
-      "city_code": "北京",
-      "city_name": "北京",
-      "active_count": 1200,
-      "new_count": 80,
-      "offline_count": 20,
-      "net_change": 60
-    }
+    { "city_code": "北京", "city_name": "北京", "active_count": 1200, "new_count": 80, "offline_count": 20, "net_change": 60 },
+    { "city_code": "上海", "city_name": "上海", "active_count": 980, "new_count": 62, "offline_count": 18, "net_change": 44 },
+    { "city_code": "深圳", "city_name": "深圳", "active_count": 860, "new_count": 58, "offline_count": 17, "net_change": 41 },
+    { "city_code": "广州", "city_name": "广州", "active_count": 620, "new_count": 39, "offline_count": 12, "net_change": 27 },
+    { "city_code": "杭州", "city_name": "杭州", "active_count": 510, "new_count": 35, "offline_count": 9, "net_change": 26 },
+    { "city_code": "成都", "city_name": "成都", "active_count": 470, "new_count": 32, "offline_count": 11, "net_change": 21 }
   ],
   "trend": [],
   "hot_roles": []

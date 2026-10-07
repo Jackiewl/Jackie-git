@@ -6,3 +6,6 @@ career-plan-agent/
 *.log
 .DS_Store
 Thumbs.db
+.agents/
+/frontend.zip
+/frontend/student-employment-dist.tar.gz

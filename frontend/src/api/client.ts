@@ -36,7 +36,7 @@ function normalizeError(error: unknown): Error {
 export async function postApi<T, P extends object>(path: ApiPath, payload: P): Promise<T> {
   if (useMock) {
     await new Promise((resolve) => window.setTimeout(resolve, 180));
-    return getMockData<T>(path);
+    return getMockData<T>(path, payload);
   }
 
   try {

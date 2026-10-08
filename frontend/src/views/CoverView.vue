@@ -78,7 +78,6 @@
               <el-button class="glow-action" type="primary" :icon="LayoutDashboard" @click="goWorkspace">进入学生工作台</el-button>
               <el-button class="glow-action" :icon="MapPinned" @click="goRoles">探索岗位画像</el-button>
               <el-button class="glow-action" :icon="Route" @click="goLearning">查看标准学习路径</el-button>
-              <el-button class="glow-action" :icon="Route" @click="goLearning">查看标准学习路径</el-button>
             </div>
           </div>
         </div>

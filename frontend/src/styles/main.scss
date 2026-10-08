@@ -551,7 +551,7 @@ h1, h2, h3, h4, p { margin: 0; }
   .mission-console__readout { grid-template-columns: 1fr 1fr 1fr; }
   .ability-modules, .tool-modules { padding: 14px; }
   .tool-orbit { grid-template-columns: 1fr; }
-  .market-terminal { margin-inline: -14px; padding: 24px 14px 0; }
+  .market-terminal { margin-inline: -12px; padding: 24px 12px 0; }
 }
 
 @media (max-width: 420px) {
@@ -902,6 +902,7 @@ body { font-size: 17px; }
 }
 
 @media (max-width: 720px) {
+  .app-shell, .workspace { overflow-x: hidden; }
   body { font-size: 16px; }
   .top-navigation__item { font-size: 12px; }
   .topbar__title > p:last-child { font-size: 13px; }
@@ -910,6 +911,36 @@ body { font-size: 17px; }
   .cover-signal__heading p { font-size: 14px; }
   .practice-stage > p { font-size: 13px; }
   .practice-stage__example span { font-size: 13px; }
+}
+
+/* Compact mobile controls without reducing the minimum touch target. */
+@media (max-width: 720px) {
+  .page-content { padding: 10px 12px 24px; }
+  .topbar { min-height: 78px; padding: 11px 14px; }
+  .filter-bar { padding: 10px 11px 11px; }
+  .filter-bar__heading { gap: 8px; margin-bottom: 8px; padding-bottom: 7px; }
+  .filter-bar__heading strong { font-size: 13px; }
+  .filter-bar__row { gap: 7px; }
+  .filter-bar__row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filter-field--date { grid-column: 1 / -1; }
+  .filter-bar__actions { grid-column: 1 / -1; }
+  .filter-field { gap: 3px; font-size: 11px; }
+  .filter-bar .el-button,
+  .filter-bar .el-select__wrapper,
+  .filter-bar .el-input__wrapper,
+  .filter-bar .el-date-editor.el-input__wrapper { min-height: 40px; }
+  .filter-bar .el-segmented { min-height: 40px; }
+  .filter-bar__actions { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 7px; margin-top: 1px; }
+  .filter-bar__actions .el-button { width: 100%; min-height: 40px; }
+  .filter-bar__actions .el-button.is-circle { width: 40px; height: 40px; }
+  .section-heading { margin-bottom: 12px; }
+  .data-panel, .portrait-panel, .compare-panel, .learning-selector { padding: 13px; }
+  .metric-card { min-height: 102px; padding: 11px; }
+  .metric-card > strong { margin-top: 9px; }
+  .home-page .market-terminal { padding-top: 18px; }
+  .market-terminal__header { gap: 8px; margin-bottom: 12px; }
+  .market-terminal__header h2 { font-size: 20px; }
+  .market-terminal__header > p { line-height: 1.5; }
 }
 
 /* Cover market scan */

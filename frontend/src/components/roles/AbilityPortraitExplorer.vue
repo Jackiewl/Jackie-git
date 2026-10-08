@@ -242,6 +242,21 @@ watch(() => [props.profile, props.initialAbility] as const, () => {
 .is-dense .portrait-orbit-node strong { margin-top: 5px; }
 @keyframes portrait-signal { to { stroke-dashoffset: -30; } }
 @media (max-width: 1250px) { .portrait-visuals { grid-template-columns: 1fr; gap: 28px; }.portrait-orbit { max-width: 780px; margin-inline: auto; }.portrait-priorities { border-left: 0; padding-left: 0; }.portrait-weight-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }.portrait-focus-summary { display: none; }.portrait-tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 720px) { .portrait-section-head { align-items: flex-start; }.portrait-micro-heading { flex-wrap: wrap; }.portrait-micro-layout { grid-template-columns: 1fr; gap: 22px; }.portrait-micro-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }.portrait-micro-nav button { padding: 10px; gap: 7px; }.portrait-micro-nav small { display: none; }.portrait-micro-nav svg { display: none; }.portrait-micro-nav button { min-height: 62px; }.portrait-micro-detail h3 { font-size: 18px; }.portrait-detail-columns { grid-template-columns: 1fr; gap: 8px; }.portrait-task-grid { grid-template-columns: 1fr; }.portrait-tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.portrait-orbit-core { padding: 7px; }.portrait-orbit-core strong { font-size: 12px; }.portrait-orbit-core svg { width: 18px; height: 18px; }.portrait-orbit-core span { display: none; }.portrait-orbit-node strong { font-size: 11px; margin-top: 24px; min-height: 32px; padding: 0; }.portrait-orbit-node small { font-size: 9px; }.portrait-node-icon svg { width: 17px; height: 17px; }.portrait-orbit-key { margin-top: 38px; gap: 9px; font-size: 10px; }.portrait-weight-list { grid-template-columns: 1fr; }.portrait-evidence-flow > span { flex-direction: column; padding: 8px; gap: 5px; flex: 1; font-size: 11px; }.portrait-micro-heading .el-button { width: 100%; } }
+  @media (max-width: 720px) { .portrait-section-head { align-items: flex-start; }.portrait-micro-heading { flex-wrap: wrap; }.portrait-micro-layout { grid-template-columns: 1fr; gap: 22px; }.portrait-micro-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }.portrait-micro-nav button { padding: 10px; gap: 7px; }.portrait-micro-nav small { display: none; }.portrait-micro-nav svg { display: none; }.portrait-micro-nav button { min-height: 62px; }.portrait-micro-detail h3 { font-size: 18px; }.portrait-detail-columns { grid-template-columns: 1fr; gap: 8px; }.portrait-task-grid { grid-template-columns: 1fr; }.portrait-tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* Replace desktop orbit coordinates with a stable touch-friendly map on phones. */
+    .portrait-orbit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; aspect-ratio: auto; min-height: 0; padding: 8px; background: #091d25; border: 1px solid #26444d; }
+    .portrait-orbit-svg { display: none; }
+    .portrait-orbit-core { position: static; grid-column: 1 / -1; width: auto; min-height: 88px; transform: none; padding: 9px; }
+    .portrait-orbit-core strong { max-width: 100%; font-size: 12px; line-height: 1.35; }
+    .portrait-orbit-core svg { width: 18px; height: 18px; }
+    .portrait-orbit-core span { display: block; font-size: 10px; }
+    .portrait-orbit-node { position: static; left: auto !important; top: auto !important; width: 100%; min-height: 82px; padding: 8px 6px; transform: none !important; background: #102930; border: 1px solid #34515a; }
+    .portrait-orbit-node:hover, .portrait-orbit-node:focus-visible, .portrait-orbit-node.is-selected { transform: none !important; }
+    .portrait-node-icon { width: 30px; height: 30px; }
+    .portrait-node-icon svg { width: 17px; height: 17px; }
+    .portrait-orbit-node strong { min-height: 0; margin-top: 4px; padding: 0; font-size: 11px; line-height: 1.35; }
+    .portrait-orbit-node small { margin-top: 3px; padding: 0; font-size: 9px; line-height: 1.35; white-space: normal; }
+    .portrait-orbit-key { margin-top: 12px; gap: 8px; font-size: 10px; }
+    .portrait-weight-list { grid-template-columns: 1fr; }.portrait-evidence-flow > span { flex-direction: column; padding: 8px; gap: 5px; flex: 1; font-size: 11px; }.portrait-micro-heading .el-button { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .is-moving .portrait-orbit-link.is-selected { animation: none; } }
 </style>
